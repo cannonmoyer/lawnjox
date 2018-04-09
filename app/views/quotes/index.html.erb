@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+          <h2>Quotes</h2>
+          <%= paginate @quotes %>  
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Date</th>
+                <th>Name</th>
+                <th>Address</th>
+                <th>Phone Number</th>
+                <th>Email</th>
+              </tr>
+            </thead>
+            <tbody>
+                <% @quotes.each do |i| %>
+                    <tr>
+                        <td><%= i.id %></td>
+                        <td><%= i.created_at.strftime("%A, %B %d, %Y") %></td>
+                        <td><%= i.name %></td>
+                        <td><%= i.address %></td>
+                        <td><%= i.phone %></td>
+                        <td><%= i.email %></td>
+                    </tr>
+                <% end %>
+            </tbody>
+          </table>
+          <%= paginate @quotes %>
+        </div>
+    </div>
+</div>

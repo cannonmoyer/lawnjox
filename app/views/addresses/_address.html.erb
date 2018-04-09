@@ -1,0 +1,10 @@
+<li data-id="<%= address.id %>" data-address="<%= address.street %> <%= address.city %> <%= address.state %>">
+<div class="row results-container">
+    <div class="col-md-8 address-container">
+         <span class="address"><%= address.street %> <%= address.city %> <%= address.state %> <span style="color:white; font-size:80%;">(click me)</span></span>                   
+    </div>
+    <div class="col-md-1">
+         <img src="https://maps.googleapis.com/maps/api/streetview?size=150x50&location=<%= address.street %> <%= address.city %> <%= address.state %>&fov=180&heading=0&pitch=0&key=AIzaSyB0AVax3Llhouag6fE6KH8JGsEANiDMnsk">                                    
+    </div>
+</div>
+</li>

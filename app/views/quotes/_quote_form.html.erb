@@ -1,0 +1,57 @@
+<div class="container qc" style="padding:0px !important; width:100%;">
+      <div class="row">
+        <div class="col-md-12">
+            <div id="quote-container">
+                <span style="font-size:100%;display:block;text-align:center;font-weight:900;">Select From The Service Options Below!</span>
+                <span style="font-size:100%;display:block;text-align:center;font-style:italic;font-size:13px;">Address: <%= @address.street %> <%= @address.city %> <%= @address.state %></span>
+                
+             <FORM METHOD="POST" ACTION="https://ww9.aitsafe.com/cf/addmulti.cfm" target="_parent">
+                <INPUT TYPE="HIDDEN" NAME="userid" VALUE="B1190129">
+                <div class="lawn-mowing">
+                  <div class="top-section">
+                       <span>Lawn Mowing</span>
+                       <img src="https://lawnjox.com/wp-content/uploads/2018/03/lawn-mower.png" class="scale-with-grid" alt="lawn-mower"> 
+                       
+                  </div>
+                  <div class="bottom-section">
+                        <input id="mowing" type="checkbox" style="vertical-align:middle;width:15px;height:15px;" checked><span class="service-text" style="color:white;font-weight:900;">Lawn Mowing <%= @lawn_mowing_price %></span>  
+                        <INPUT id="lawn-mowing-qty" TYPE="hidden" NAME="qty1" value="1"> 
+                        <INPUT TYPE="HIDDEN" NAME="product1" VALUE="Lawn Mowing">
+                        <INPUT TYPE="HIDDEN" NAME="price1" VALUE="<%= @lawn_mowing_price %>">
+                  </div>
+                    
+                </div>
+                
+                <div class="lawn-mowing">
+                  <div class="top-section">
+                       <span>Lawn Care (spraying)</span>
+                       <img src="https://lawnjox.com/wp-content/uploads/2018/02/lawn.png" class="scale-with-grid" alt="lawn">  
+                  </div>
+                  <div class="bottom-section">
+                      <input id="spraying" type="checkbox" style="vertical-align:middle;width:15px;height:15px;" checked><span class="service-text" style="color:white;font-weight:900;">Lawn Spraying <%= @lawn_spraying_price %></span>  
+                      <INPUT id="lawn-spraying-qty" TYPE="hidden" NAME="qty2" value="1">
+                      <INPUT TYPE="HIDDEN" NAME="product2" VALUE="Lawn Care (Spraying)">
+                      <INPUT TYPE="HIDDEN" NAME="price2" VALUE="<%= @lawn_spraying_price %>">
+                  </div>
+                </div>
+                    
+                
+               
+                <div class="row" style="text-align:center;">
+                          <div class="col-md-12">
+                              
+                              <button type="submit" class="form-control btn-default">Proceed to Checkout</button>
+                          </div>
+                      </div>
+                      <div style="text-align:center;">
+                        <span class="step"></span>
+                        <span class="step active"></span>
+                        <span class="step"></span>
+                      </div>
+                </FORM>
+                </div>
+        </div>
+    </div>
+</div>
+    
+    

@@ -1,0 +1,14 @@
+<% if @addresses.size > 0 %>
+jQuery("#results").html("");
+jQuery("<%= escape_javascript(render :partial => "address", collection: @addresses) %>").appendTo("#results");
+jQuery( "#results" ).removeClass( "hidden" );
+jQuery( "#select-address" ).removeClass( "hidden" );
+jQuery( "#no-address" ).removeClass( "hidden" );
+<% else %>
+jQuery("#results").html("");
+jQuery("<li class='no-add-found'>No Addresses Found.</li>").appendTo("#results");
+jQuery( "#results" ).addClass( "hidden" );
+jQuery( "#select-address" ).addClass( "hidden" );
+jQuery( "#no-address" ).addClass( "hidden" );
+<% end %>
+

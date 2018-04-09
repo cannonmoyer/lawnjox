@@ -1,0 +1,6 @@
+jQuery("#instant-quote").html("");
+<% if @quote == true %>
+jQuery("<%= escape_javascript(render :partial => "quote_form") %>").appendTo("#instant-quote");
+<% else %>
+    jQuery("<%= escape_javascript(render :partial => "no_quote") %>").appendTo("#instant-quote");
+<% end %>
