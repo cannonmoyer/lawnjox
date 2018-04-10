@@ -1,5 +1,5 @@
 config = {
-  host: "http://localhost:9200",
+  host: "https://f9a2zbqaa3:1mv4dj0kmg@ash-9594552.us-east-1.bonsaisearch.net",
   transport_options: {
     request: { timeout: 5 }
   }
