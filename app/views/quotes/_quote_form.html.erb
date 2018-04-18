@@ -14,10 +14,10 @@
                        
                   </div>
                   <div class="bottom-section">
-                        <input id="mowing" type="checkbox" style="vertical-align:middle;width:15px;height:15px;" checked><span class="service-text" style="color:white;font-weight:900;">Lawn Mowing <%= @lawn_mowing_price %></span>  
+                        <input id="mowing" type="checkbox" style="vertical-align:middle;width:15px;height:15px;" checked><span class="service-text" style="color:white;font-weight:900;">Lawn Mowing <%= number_to_currency(@address.mowing_price.round(2) %></span>  
                         <INPUT id="lawn-mowing-qty" TYPE="hidden" NAME="qty1" value="1"> 
                         <INPUT TYPE="HIDDEN" NAME="product1" VALUE="Lawn Mowing">
-                        <INPUT TYPE="HIDDEN" NAME="price1" VALUE="<%= @lawn_mowing_price %>">
+                        <INPUT TYPE="HIDDEN" NAME="price1" VALUE="<%=  @address.mowing_price.round(2) %>">
                   </div>
                     
                 </div>
@@ -28,10 +28,10 @@
                        <img src="https://lawnjox.com/wp-content/uploads/2018/02/lawn.png" class="scale-with-grid" alt="lawn">  
                   </div>
                   <div class="bottom-section">
-                      <input id="spraying" type="checkbox" style="vertical-align:middle;width:15px;height:15px;" checked><span class="service-text" style="color:white;font-weight:900;">Lawn Spraying <%= @lawn_spraying_price %></span>  
+                      <input id="spraying" type="checkbox" style="vertical-align:middle;width:15px;height:15px;" checked><span class="service-text" style="color:white;font-weight:900;">Lawn Spraying <%= number_to_currency(@address.spraying.round(2) %></span>  
                       <INPUT id="lawn-spraying-qty" TYPE="hidden" NAME="qty2" value="1">
                       <INPUT TYPE="HIDDEN" NAME="product2" VALUE="Lawn Care (Spraying)">
-                      <INPUT TYPE="HIDDEN" NAME="price2" VALUE="<%= @lawn_spraying_price %>">
+                      <INPUT TYPE="HIDDEN" NAME="price2" VALUE="<%= @address.spraying_price.round(2) %>">
                   </div>
                 </div>
                     
@@ -53,5 +53,6 @@
         </div>
     </div>
 </div>
-    
+<br />
+<br />
     
