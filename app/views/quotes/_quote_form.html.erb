@@ -14,7 +14,7 @@
                        
                   </div>
                   <div class="bottom-section">
-                        <input id="mowing" type="checkbox" style="vertical-align:middle;width:15px;height:15px;" checked><span class="service-text" style="color:white;font-weight:900;">Lawn Mowing <%= number_to_currency(@address.mowing_price.round(2)) %></span>  
+                        <input id="mowing" type="checkbox" style="vertical-align:middle;width:15px;height:15px;" checked><span class="service-text" style="color:white;font-weight:900;">Lawn Mowing <%= number_to_currency(@address.mowing_price.round(2)) %> (Weekly)</span>  
                         <INPUT id="lawn-mowing-qty" TYPE="hidden" NAME="qty1" value="1"> 
                         <INPUT TYPE="HIDDEN" NAME="product1" VALUE="Lawn Mowing">
                         <INPUT TYPE="HIDDEN" NAME="price1" VALUE="<%=  @address.mowing_price.round(2) %>">
@@ -53,6 +53,5 @@
         </div>
     </div>
 </div>
-<br />
-<br />
+
     
