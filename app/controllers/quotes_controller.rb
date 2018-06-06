@@ -10,6 +10,13 @@ class QuotesController < ApplicationController
         @quotes = Quote.all.order(created_at: :desc).page(page).per(15)
     end
     
+    def destroy
+       quote = Quote.find(params[:id])
+       quote.destroy!
+       
+       redirect_to quotes_path()
+    end
+    
     def new
         
     end

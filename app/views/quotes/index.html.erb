@@ -12,6 +12,7 @@
                 <th>Address</th>
                 <th>Phone Number</th>
                 <th>Email</th>
+                <th>Delete</th>
               </tr>
             </thead>
             <tbody>
@@ -23,6 +24,7 @@
                         <td><%= i.address %></td>
                         <td><%= i.phone %></td>
                         <td><%= i.email %></td>
+                        <td><%= link_to 'Delete',  i,  method: :delete, data: { confirm: 'Are you sure?' } %></td>
                     </tr>
                 <% end %>
             </tbody>
