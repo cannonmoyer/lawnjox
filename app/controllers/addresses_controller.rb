@@ -25,8 +25,7 @@ skip_before_action :verify_authenticity_token
     end
     
     def search
-        log = Logger.new('log/address.log')
-	    log.info("#{params[:q]}")	
+       
 	   
         #Address.all.import force: true
         @addresses = Address.all
