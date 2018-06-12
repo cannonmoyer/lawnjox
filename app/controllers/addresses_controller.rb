@@ -25,8 +25,9 @@ skip_before_action :verify_authenticity_token
     end
     
     def search
-        my_logger = Logger.new("#{Rails.root}/log/address.log")
-        my_logger.info("#{params[:q]}")
+        log = Logger.new('log/address.log')
+	    log.info("#{params[:q]}")	
+	   
         #Address.all.import force: true
         @addresses = Address.all
         puts @addresses.size
